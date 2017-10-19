@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall
 CLIBS=-lm -lpthread
-EXEC=so-thread
+EXEC=thread
 
 .PHONY: all clean
 
@@ -11,5 +11,5 @@ clean:
 	rm -f $(EXEC)
 	rm -f *~
 
-$(EXEC): Trabalho.c
+$(EXEC): thread.c
 	$(CC) -o $@ $< $(CFLAGS) $(CLIBS)
